@@ -2,7 +2,7 @@ import os
 import logging
 import socket
 
-LOG_FILE = "/var/log/backup.log"
+LOG_FILE = "/var/log/py-backup.log"
 
 LOG_DIR = os.path.dirname(LOG_FILE)
 if LOG_DIR and not os.path.exists(LOG_DIR):

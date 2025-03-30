@@ -23,6 +23,8 @@ class BackupManager:
 
         if os.path.exists(full_backup):
             shutil.rmtree(full_backup, ignore_errors=True)
+        
+        os.makedirs(full_backup, exist_ok=True)
 
         try:
             subprocess.run(["rsync", "-av", "--delete", source_dir, full_backup], check=True)
